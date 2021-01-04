@@ -3,7 +3,13 @@
 轻量的封装，简单易用
 配置代码：
 ```
-CGFloat width = 78;
+@interface ViewController ()
+@property(nonatomic, strong)AGSCircleProgressView *loadingProgressView;
+@property(nonatomic,strong)UISlider *slider;
+@end
+
+@implementation ViewController
+    CGFloat width = 78;
     //1.创建圆环
     AGSCircleViewConfig *configure = [[AGSCircleViewConfig alloc]init];
     //圆环背景色
@@ -26,4 +32,5 @@ CGFloat width = 78;
     _loadingProgressView = [[AGSCircleProgressView alloc]initWithFrame:CGRectMake(100, 100, width, width) configure:configure];
     _loadingProgressView.progress = 0;
     [self.view addSubview:_loadingProgressView];
+@end
 ```
